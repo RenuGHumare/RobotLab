@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210305 23:59:06.120" rpa="false">
+<suite id="s1" name="Navigation" source="C:\Users\RenuGhumare\PycharmProjects\RobotLab\Tests\Navigation.robot">
+<test id="s1-t1" name="Make a booking of car">
+<kw name="Given User Opens An Application" library="NavigationKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:06.656" level="INFO">Opening browser 'Chrome' to base url 'http://rental24.infotiv.net/'.</msg>
+<status status="PASS" starttime="20210305 23:59:06.655" endtime="20210305 23:59:09.440"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:06.655" endtime="20210305 23:59:09.440"></status>
+</kw>
+<kw name="And User Enter Email and Password" library="NavigationKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_TEXTBOX}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:09.446" level="INFO">Clicking element '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:09.445" endtime="20210305 23:59:09.537"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_TEXTBOX}</arg>
+<arg>Eve.Adam@gmail.com</arg>
+</arguments>
+<msg timestamp="20210305 23:59:09.537" level="INFO">Typing text 'Eve.Adam@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:09.537" endtime="20210305 23:59:09.655"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_TEXTBOX}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:09.656" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:09.656" endtime="20210305 23:59:09.717"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_TEXTBOX}</arg>
+<arg>Samurai</arg>
+</arguments>
+<msg timestamp="20210305 23:59:09.718" level="INFO">Typing text 'Samurai' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:09.717" endtime="20210305 23:59:09.817"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:09.445" endtime="20210305 23:59:09.817"></status>
+</kw>
+<kw name="Then User Click Login Button" library="NavigationKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:09.817" level="INFO">Clicking element '//*[@id="login"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:09.817" endtime="20210305 23:59:10.538"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:09.817" endtime="20210305 23:59:10.540"></status>
+</kw>
+<kw name="Then Verify Login Success Message" library="NavigationKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SUCCESS_LOGIN_LEBEL}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:10.550" endtime="20210305 23:59:10.620"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${SUCCESS_LOGIN_LEBEL}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:10.676" level="INFO">Element '//*[@id="welcomePhrase"]' is displayed.</msg>
+<status status="PASS" starttime="20210305 23:59:10.620" endtime="20210305 23:59:10.676"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:10.547" endtime="20210305 23:59:10.676"></status>
+</kw>
+<kw name="Then User Select Date" library="NavigationKeywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id=reset</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210305 23:59:10.678" level="INFO">Sending key(s) ('RETURN',) to id=reset element.</msg>
+<msg timestamp="20210305 23:59:11.363" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210305 23:59:11.363" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210305 23:59:10.678" endtime="20210305 23:59:11.378"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=start</arg>
+<arg>03/12/2021</arg>
+</arguments>
+<msg timestamp="20210305 23:59:11.379" level="INFO">Typing text '03/12/2021' into text field 'id=start'.</msg>
+<status status="PASS" starttime="20210305 23:59:11.378" endtime="20210305 23:59:11.603"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=end</arg>
+<arg>03/15/2021</arg>
+</arguments>
+<msg timestamp="20210305 23:59:11.604" level="INFO">Typing text '03/15/2021' into text field 'id=end'.</msg>
+<status status="PASS" starttime="20210305 23:59:11.604" endtime="20210305 23:59:11.801"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:10.678" endtime="20210305 23:59:11.801"></status>
+</kw>
+<kw name="Then User Click Continue" library="NavigationKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTINUE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210305 23:59:11.801" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:11.801" endtime="20210305 23:59:12.835"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:11.801" endtime="20210305 23:59:12.835"></status>
+</kw>
+<kw name="Then User Scroll the Page and Select car" library="NavigationKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="ms-list-2"]</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:12.837" endtime="20210305 23:59:12.856"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="bookQ7pass5"]</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:12.856" endtime="20210305 23:59:12.872"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="bookQ7pass5"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:12.899" level="INFO">Element '//*[@id="bookQ7pass5"]' is displayed.</msg>
+<status status="PASS" starttime="20210305 23:59:12.872" endtime="20210305 23:59:12.899"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@id="bookQ7pass5"]</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210305 23:59:12.900" level="INFO">Sending key(s) ('RETURN',) to //*[@id="bookQ7pass5"] element.</msg>
+<msg timestamp="20210305 23:59:13.888" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210305 23:59:13.888" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210305 23:59:12.900" endtime="20210305 23:59:13.939"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:12.836" endtime="20210305 23:59:13.941"></status>
+</kw>
+<kw name="Then User Fill Up The Information" library="NavigationKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="questionText"]</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:13.943" endtime="20210305 23:59:13.991"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="questionText"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.026" level="INFO">Element '//*[@id="questionText"]' is displayed.</msg>
+<status status="PASS" starttime="20210305 23:59:13.991" endtime="20210305 23:59:14.026"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=cardNum</arg>
+<arg>1234567812345678</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.026" level="INFO">Typing text '1234567812345678' into text field 'id=cardNum'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.026" endtime="20210305 23:59:14.195"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=fullName</arg>
+<arg>anacarin</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.195" level="INFO">Typing text 'anacarin' into text field 'id=fullName'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.195" endtime="20210305 23:59:14.345"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="confirmSelection"]/form/select[1]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.346" level="INFO">Clicking element '//*[@id="confirmSelection"]/form/select[1]'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.345" endtime="20210305 23:59:14.445"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="month6"]</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:14.445" endtime="20210305 23:59:14.495"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="month6"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.516" level="INFO">Element '//*[@id="month6"]' is displayed.</msg>
+<status status="PASS" starttime="20210305 23:59:14.495" endtime="20210305 23:59:14.516"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="month6"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.517" level="INFO">Clicking element '//*[@id="month6"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.517" endtime="20210305 23:59:14.560"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="confirmSelection"]/form/select[2]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.561" level="INFO">Clicking element '//*[@id="confirmSelection"]/form/select[2]'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.561" endtime="20210305 23:59:14.648"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="month2022"]</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:14.649" endtime="20210305 23:59:14.673"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="month2022"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.693" level="INFO">Element '//*[@id="month2022"]' is displayed.</msg>
+<status status="PASS" starttime="20210305 23:59:14.673" endtime="20210305 23:59:14.693"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="month2022"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.694" level="INFO">Clicking element '//*[@id="month2022"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.694" endtime="20210305 23:59:14.732"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=cvc</arg>
+<arg>234</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.733" level="INFO">Typing text '234' into text field 'id=cvc'.</msg>
+<status status="PASS" starttime="20210305 23:59:14.732" endtime="20210305 23:59:14.852"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:13.943" endtime="20210305 23:59:14.852"></status>
+</kw>
+<kw name="Then User Confirm Booking" library="NavigationKeywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@id="confirm"]</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210305 23:59:14.855" level="INFO">Sending key(s) ('RETURN',) to //*[@id="confirm"] element.</msg>
+<msg timestamp="20210305 23:59:15.456" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210305 23:59:15.457" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210305 23:59:14.854" endtime="20210305 23:59:15.469"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${CONFIRM_URL}</arg>
+<arg>${CONFIRM_URL}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:15.469" endtime="20210305 23:59:15.469"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:14.853" endtime="20210305 23:59:15.469"></status>
+</kw>
+<kw name="Then User Click MyPage To See Details" library="NavigationKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="mypage"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:15.471" level="INFO">Clicking element '//*[@id="mypage"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:15.471" endtime="20210305 23:59:15.817"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${MYPAGE_URL}</arg>
+<arg>${MYPAGE_URL}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 23:59:15.817" endtime="20210305 23:59:15.818"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:15.469" endtime="20210305 23:59:15.819"></status>
+</kw>
+<kw name="Then User Sign out" library="NavigationKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="logout"]</arg>
+</arguments>
+<msg timestamp="20210305 23:59:15.822" level="INFO">Clicking element '//*[@id="logout"]'.</msg>
+<status status="PASS" starttime="20210305 23:59:15.822" endtime="20210305 23:59:16.330"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:15.820" endtime="20210305 23:59:16.331"></status>
+</kw>
+<kw name="And Should Close the browser" library="NavigationKeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210305 23:59:16.332" endtime="20210305 23:59:18.691"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:16.331" endtime="20210305 23:59:18.692"></status>
+</kw>
+<kw name="End Web Test" library="NavigationKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210305 23:59:18.694" endtime="20210305 23:59:18.694"></status>
+</kw>
+<status status="PASS" starttime="20210305 23:59:18.694" endtime="20210305 23:59:18.694"></status>
+</kw>
+<doc>This is the information about user login in system and book a car</doc>
+<tags>
+<tag>Functional Test VG</tag>
+</tags>
+<status status="PASS" starttime="20210305 23:59:06.654" endtime="20210305 23:59:18.698" critical="yes"></status>
+</test>
+<doc>This is the test information about login function of http://rental24.infotiv.net/</doc>
+<status status="PASS" starttime="20210305 23:59:06.135" endtime="20210305 23:59:18.704"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Functional Test VG</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Navigation">Navigation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
